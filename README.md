@@ -9,4 +9,8 @@ This project will entail:
 
 1. Added multilib support to RISCV-GNU-Toolchain in Chipyard by appending "--enable-multilib" to the arguments passed during toolchain creation (in /scripts/build-toolchains.sh)
 
+*Usage*
+
+* The update\_build\_toolchains.sh script is intended to be used before running the 'build\_toolchains.sh script located under {chipyard\_dir}/scripts to enable multilib support required to compile c programs for RV32 (used by the Chipyard Arty FPGA project. This script also adds several variables used by the Freedom E SDK and other scripts to the environment variables file for Chipyard.
+
 #TODO finish Readme
