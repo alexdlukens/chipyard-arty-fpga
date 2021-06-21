@@ -20,6 +20,6 @@ This script is intended to be used before running the 'build\_toolchains.sh scri
 
 * **update\_build\_toolchains.sh**
 
-> update\_build\_toolchains.sh <Path to Freedom E SDK>
+> update\_build\_toolchains.sh \<Path to Freedom E SDK\>
 
 # TODO finish Readme
