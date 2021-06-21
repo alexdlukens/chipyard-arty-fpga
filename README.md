@@ -8,12 +8,12 @@ for ther Chipyard Arty Implementaiton
 
 *Steps Taken*
 
-1. Added multilib support to RISCV-GNU-Toolchain in Chipyard by appending "--enable-multilib" to the arguments passed during toolchain creation (in /scripts/build-toolchains.sh"
+1. Added multilib support to RISCV-GNU-Toolchain in Chipyard by appending "--enable-multilib" to the arguments passed during toolchain creation (in /scripts/build-toolchains.sh)
 
-# Old line
+#### Old line
 module\_build riscv-gnu-toolchain --prefix="${RISCV}" --with-cmodel=medany
 
-# New line
+#### New line
 module\_build riscv-gnu-toolchain --prefix="${RISCV}" --with-cmodel=medany **--enable-multilib**
 
 2. Ensure $RISCV\_PATH and $RISCV\_OPENOCD\_PATH set for Freedom-e-sdk support
