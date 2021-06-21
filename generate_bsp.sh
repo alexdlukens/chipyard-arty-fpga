@@ -19,7 +19,7 @@ if [ ! -f "${GENERATED_DTS}" ]; then
 	echo "Generated DTS file does not exist. Ensure the \"LONG_NAME\" variable is set correctly in this script";
 	exit 1;
 
-if [ ! -d "./bsp/arty" ]; then
+if [ ! -d "${FREEDOM_SDK}/bsp/chipyard_arty" ]; then
 	mkdir ${FREEDOM_SDK}/bsp/chipyard_arty;
 fi
 
