@@ -12,8 +12,14 @@ This project will entail:
 
 # About
 
-* The update\_build\_toolchains.sh script is intended to be used before running the 'build\_toolchains.sh script located under {chipyard\_dir}/scripts to enable multilib support required to compile c programs for RV32 (used by the Chipyard Arty FPGA project. This script also adds several variables used by the Freedom E SDK and other scripts to the environment variables file for Chipyard.
+* **update\_build\_toolchains.sh**
+
+This script is intended to be used before running the 'build\_toolchains.sh script located under {chipyard\_dir}/scripts. This will enable multilib support required to compile c programs for RV32 (used by the Chipyard Arty FPGA project. This script also adds several variables used by the Freedom E SDK and other scripts to the environment variables file for Chipyard.
 
 # Usage
+
+* **update\_build\_toolchains.sh**
+
+> update\_build\_toolchains.sh <Path to Freedom E SDK>
 
 # TODO finish Readme
