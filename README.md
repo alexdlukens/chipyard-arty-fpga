@@ -18,10 +18,21 @@ This script is intended to be used before running the 'build\_toolchains.sh scri
 
 Assumes that Freedom E SDK is in the same parent directory as Chipyard
 
+* **genrate\_bsp.sh**
+
+This script is used to generate custom board support files for the Freedom E SDK for the Chipyard Arty FPGA default project. After running the update\_build\_toolchains.sh script and re-executing build\_toolchains.sh, the environment variables should be updated to include the Freedom E SDK install location.
+
+Running this script will create a new folder under the 'bsp' in the Freedom E SDK named 'chipyard\_arty"
+
+
 # Usage
 
 * **update\_build\_toolchains.sh**
 
-> update\_build\_toolchains.sh \<Path to Freedom E SDK\>
+> ./update\_build\_toolchains.sh \<Path to Freedom E SDK\>
+
+* **generate\_bsp.sh**
+
+> ./generate\_bsp.sh
 
 # TODO finish Readme
