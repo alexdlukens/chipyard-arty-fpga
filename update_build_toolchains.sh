@@ -33,7 +33,7 @@ sed -i '/${LD_LIBRARY_PATH}/{N;s/\n$//}' $BUILD_TOOLCHAINS
 #add additional variables to Chipyard ENV files to support Freedom E SDK
 sed -i '/${LD_LIBRARY_PATH}"}/ a \\n#added by update_build_toolchains script \nexport RISCV_PATH=${RISCV} \nexport RISCV_OPENOCD_PATH=${RISCV} \nexport FPGA_PATH=${RISCV}/../fpga' $BUILD_TOOLCHAINS
 
-sed -i "/{RISCV}\/..\/fpga/ a FREEDOM_SDK=$FREEDOM_SDK_PATH" $BUILD_TOOLCHAINS
+sed -i "/{RISCV}\/..\/fpga/ a export FREEDOM_SDK=$FREEDOM_SDK_PATH" $BUILD_TOOLCHAINS
 
 
 #return to starting dir
