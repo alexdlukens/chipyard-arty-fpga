@@ -43,7 +43,7 @@ sed -i "/{RISCV}\/..\/fpga/ a export FREEDOM_SDK=$FREEDOM_SDK_PATH" $BUILD_TOOLC
 while true; do
     read -p "Script changes applied, recompile toolchain? (this may take a while) [y/n]" yn
     case $yn in
-        [Yy]* ) ${CHIPYARD_DIR}/scripts/build-toolchains.sh; break;;
+        [Yy]* ) cd ${CHIPYARD_DIR}; ./scripts/build-toolchains.sh; break;;
         [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
     esac
