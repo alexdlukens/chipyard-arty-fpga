@@ -25,9 +25,9 @@ fi
 
 #edit dts file to include 'flash' device under spi@10014000 node
 LINE_NUM=$(awk '/@10014000/ {print FNR}' ${GENERATED_DTS})
-
+[ -z "$LINE_NUM" ] && echo "SPI Flash@10014000 device not found, exiting" && exit 1
 if grep -qF "flash@0" ${GENERATED_DTS};then
-	echo "DTS File already has flash device"
+	echo "DTS File already has device flash@0"
 else
 	echo "Editing DTS File"
 	sed -i "${LINE_NUM},/\};/{s/\};/\tflash@0 \{\n\t\t\t\tcompatible = \"jedec,spi-nor\"; \n\t\t\t\treg = <0x20000000 0x7a12000>; \n\t\t\t\}; \n\t\t\};/}" ${GENERATED_DTS}
