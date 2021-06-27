@@ -31,7 +31,7 @@ if grep -qF "flash@0" ${GENERATED_DTS};then
 else
 	echo "Editing DTS File"
 	sed -i "${LINE_NUM},/\};/{s/\};/\tflash@0 \{\n\t\t\t\tcompatible = \"jedec,spi-nor\"; \n\t\t\t\treg = <0x20000000 0x7a12000>; \n\t\t\t\}; \n\t\t\};/}" ${GENERATED_DTS}
-
+	sed -i "0,/clock-frequency = <100/s//clock-frequency = <65/" ${GENERATED_DTS}
 fi
 
 
